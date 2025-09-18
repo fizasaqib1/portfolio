@@ -32,3 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   progressBars.forEach(bar => observer.observe(bar));
 });
+const skills = document.querySelectorAll('.progress');
+
+function animateSkills() {
+  const trigger = window.innerHeight * 0.85;
+
+  skills.forEach(skill => {
+    const top = skill.getBoundingClientRect().top;
+    const width = skill.getAttribute('class').match(/\d+%$/); // fallback for CSS width class
+    const dataWidth = skill.dataset.width || width || '0%';
+
+    if(top < trigger){
+      skill.style.width = dataWidth;
+    }
+  });
+}
+
+window.addEventListener('scroll', animateSkills);
+window.addEventListener('load', animateSkills);
