@@ -50,7 +50,7 @@ body {
   color: #00adb5;
 }
 
-section, .home, .about, .work, .resume, .hireme {
+section, .home, .about, .work, .resume{
   padding: 6rem 5% 4rem;
   min-height: 100vh;
 }
@@ -274,9 +274,7 @@ border-radius: 18px;
   width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.skills {
-  /* margin-bottom: 20px; */
-}
+
 .skill span {
   display: block;
   margin-bottom: 6px;
@@ -372,83 +370,47 @@ height: fit-content;
     margin-right: 80px;
 padding: 40px;
 }
-
-.hireme form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: auto;
-  background-color: #211f1f;
-  padding: 40px;
-  border-radius: 8px;
+.hireme{
+justify-content: center;
+align-items: center;
+text-align: center;
+padding-top: 8rem;
+margin-bottom: 30px;
+margin-top: -40px;
 
 }
-.hireme p{
-    text-align: center;
-    margin-bottom: 20px;
-}
-.hireme label {
-  margin-top: 1rem;
-  
-}
+.hireme p {
+  margin-bottom: 20px;
+  /* font-size: 2.5rem; */
+  /* margin-bottom: 1rem; */
 
-.hireme input, .hireme textarea {
-  padding: 0.7rem;
-  margin-top: 0.3rem;
-  border: none;
-  border-radius: 4px;
-  /* background: #1a1a1a; */
-  /* color: #f0f0f0; */
+  /* color: #00adb5; */
 }
-
-.hireme button {
-  margin-top: 1rem;
-  padding: 0.7rem;
-  border: none;
-  background: #00adb5;
-  color: #0e0e0e;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.hireme button:hover {
-  background: #00cfd8;
-}
-
-.resumedownload {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.resumedownload button {
-  padding: 0.7rem 1.5rem;
-  border: 1px solid #00adb5;
-  background: transparent;
-  color: #00adb5;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.resumedownload button:hover {
-  background: #00adb5;
-  color: #0e0e0e;
-}
-
-footer {
-  background: #111;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 0%;
-}
-
-footer .social a {
+.hireme .social a {
   margin: 0 0.5rem;
   color: #f0f0f0;
   text-decoration: none;
+  transition: color 0.3s;
+  background-color:#00cfd8;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+ 
 }
+.hireme .social a:hover {
+  color: #00adb5;
+}
+footer {
+  background: #111;
+  text-align: center;
+  /* padding: 1rem;  */
+  /* height: fit-content; */
+}
+
 
 footer .social a:hover {
   color: #00adb5;
