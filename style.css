@@ -99,7 +99,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.home .btn a {
+.home a {
   text-decoration: none;
   color: #00adb5;
 }
@@ -112,12 +112,10 @@ h2 {
 
 .home .social a {
   margin: 20px 0 0 0.5rem;
-  color: #f0f0f0;
+  color: black;
   text-decoration: none;
   transition: color 0.3s;
-  padding-top: 40px;
   background-color: #00cfd8;
-  color: black;
   font-weight: bold;
   padding: 5px;
   border-radius: 20px;
@@ -205,82 +203,71 @@ h2 {
   border-radius: 20px;
   padding: 5px;
 }
-/* Wrap all resume sections in a flex container */
-/* Resume container as flex with wrapping */
+
 .resume .more {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  justify-content: center; /* center all sections */
-  align-items: flex-start; /* align to top, not stretching */
+  justify-items: center;
 }
 
-/* Uniform styling for all sections */
 .skills,
 .experience,
 .whatido,
 .designskills {
-  flex: 1 1 300px;   /* min width 300px, grow if space */
-  max-width: 500px;  /* don't stretch too wide */
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
   background-color: #2c2b2b;
   border-radius: 18px;
   padding: 20px 30px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin: 0 auto;
-  float: none;        /* remove old float */
 }
 
-/* Prevent overlapping: remove any negative margins */
-.designskills {
-  margin-top: 0;
+.resume .more > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 1024px) {
   .resume .more {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
-
   .skills,
   .experience,
   .whatido,
   .designskills {
     max-width: 90%;
-    margin: 20px 0;
+    margin: 0 auto;
   }
 }
 
 .skills, .learn, .experience, .whatido, .designskills {
   width: 100%;
-  max-width: 800px; /* allows scaling on bigger screens */
+  max-width: 800px;
   background-color: #2c2b2b;
   padding: 20px 40px;
   border-radius: 18px;
-  margin: 20px auto; /* center horizontally */
+  margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  float: none;
 }
 
-/* Adjust Design Skills for larger screens */
 .designskills {
   width: 100%;
-  max-width: 530px; /* same as What I Do section */
+  max-width: 530px;
   background-color: #2c2b2b;
   padding: 40px 20px;
   border-radius: 18px;
-  /* margin: 20px auto; */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  float: none; /* remove float */
 }
+
 @media (max-width: 1024px) {
   .skills, .learn, .experience, .whatido, .designskills {
     width: 90%;
     padding: 20px;
   }
   .designskills {
-    width: 90%;
-    padding: 20px;
     margin-top: 40px;
   }
 }
@@ -360,11 +347,10 @@ h2 {
 
 .hireme .social a {
   margin: 20px 0 20px 0.5rem;
-  color: #f0f0f0;
+  color: black;
   text-decoration: none;
   transition: color 0.3s;
   background-color:#00cfd8;
-  color: black;
   font-weight: bold;
   padding: 5px;
   border-radius: 20px;
@@ -383,7 +369,6 @@ footer .social a:hover {
   color: #00adb5;
 }
 
-/* ===== Mobile First / Media Queries ===== */
 @media (max-width: 1024px) {
   .aboutdetails { flex-direction: column; text-align: center; }
   .aboutdetails img { margin-bottom: 20px; }
